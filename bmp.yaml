@@ -1,0 +1,10 @@
+# To start the execution, run `docker-compose up`
+# To stop the execution, hit Ctrl+C, and then `docker compose down -v`
+version: "3"
+services:
+  bmp-proxy:
+    image: ghcr.io/krmahadevan/bmp_docker:main
+    container_name: bmp-proxy
+    ports:
+      - "8080:8080"
+      - "8081:8081"

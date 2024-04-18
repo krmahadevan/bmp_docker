@@ -8,7 +8,7 @@ RUN curl -SL "https://github.com/lightbody/browsermob-proxy/releases/download/br
     && unzip /browsermob-proxy.zip \
     && rm -f /browsermob-proxy.zip
 
-
+RUN mkdir -p /var/run/supervisor/
 # Copy the supervisord configuration file
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
